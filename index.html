@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width:1170px)" href="phone.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary-color: rgb(209, 90, 21);
+            --font-family: 'Bree Serif', serif;
+        }
+
+        #navbar {
+            display: flex;
+            background-color: rgb(209, 90, 21);
+            position: sticky;
+            transition: .3s all;
+            backdrop-filter: blur(2px);
+        }
+
+        #logo img {
+            border-radius: 100%;
+            padding: 0;
+            margin: 5px;
+            height: 59px;
+            margin: 3px 6px;
+        }
+
+
+        /* #navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7; */
+
+        #navbar ul {
+            display: flex;
+
+        }
+
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        #navbar ul a {
+            display: block;
+            color: aliceblue;
+            padding: 26px;
+            margin-top: -19px;
+            border-radius: 2px;
+            text-decoration: none;
+            margin-bottom: -25px;
+        }
+
+        #navbar ul a:hover {
+            display: block;
+            background-color: rgb(240, 248, 255, 0.519);
+            border-radius: 10px;
+
+            /* padding: 24px;
+    margin-top: -19px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: -25px; */
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 3px 200px;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #home::before {
+            content: "";
+            position: absolute;
+            background: url(img/photo.png) no-repeat center center/cover;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            /* opacity: 0.89; */
+
+        }
+
+        #home h1 {
+            font-size: 3.8rem;
+            font-family: 'Bree Serif', serif;
+
+        }
+
+        #home p {
+            font-size: 1.5rem;
+            font-family: 'Bree Serif', serif;
+
+        }
+
+        .btn {
+            font-size: 30px;
+            border-radius: 10px;
+            background-color: var(--primary-color);
+            border: 33px;
+            color: white;
+            padding: 6px 20px;
+            border: 4px solid rgb(255, 255, 255);
+            margin: 17px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 25px 45px #e99954;
+            transition: all .3s;
+        }
+
+        .intro:hover {
+            transition: .3s all;
+            transform: scale(1.1);
+        }
+
+        .btn:hover {
+
+            transition: .3s all;
+            transform: scale(1.1);
+            transition: all .3s;
+        }
+
+        #box1 {
+            /* border: 2px solid red; */
+            padding: 30px 8px;
+            display: block;
+            margin: 6px 68px;
+            text-align: center;
+            /* border-radius: 23px; */
+            background-color: #f1dec6;
+            border-block: solid #e3ab7a 7px;
+            writing-mode: horizontal-tb;
+        }
+
+        #box1 img {
+            width: 160px;
+            transition: all .3s;
+            border-radius: 10px;
+        }
+
+        #box1 img:hover {
+            width: 200px;
+            transition: all .3s;
+            border-radius: 30px;
+        }
+
+        #box2 {
+            /* border: 2px solid red; */
+            padding: 30px 8px;
+            display: block;
+            margin: 6px 68px;
+            text-align: center;
+            /* border-radius: 23px; */
+            background-color: #f1dec6;
+            border-block: solid #e3ab7a 7px;
+            writing-mode: horizontal-tb;
+        }
+
+        #box2 img {
+            width: 160px;
+            transition: all .3s;
+            border-radius: 10px;
+        }
+
+        #box2 img:hover {
+            width: 200px;
+            transition: all .3s;
+            border-radius: 30px;
+        }
+
+        #box3 {
+            /* border: 2px solid red; */
+            padding: 30px 8px;
+            display: block;
+            margin: 6px 68px;
+            text-align: center;
+            /* border-radius: 23px; */
+            background-color: #f1dec6;
+            border-block: solid #e3ab7a 7px;
+            writing-mode: horizontal-tb;
+        }
+
+        #box3 img {
+            width: 160px;
+            transition: all .3s;
+            border-radius: 10px;
+        }
+
+        #box3 img:hover {
+            width: 200px;
+            transition: all .3s;
+            border-radius: 30px;
+        }
+
+        #service-container {
+            display: flex;
+            padding-top: 40px;
+        }
+
+        #heading {
+            text-align: center;
+            font-size: 50px;
+            padding-top: 200px;
+        }
+
+        #heading {
+            font-family: 'Bree Serif', serif;
+        }
+
+        .img1 img {
+            margin-top: 36px;
+            margin-left: 80px;
+            width: 200px;
+            height: 200px;
+            border: 20px solid #e3ab7a;
+            display: inline-block;
+            /* box-shadow: 10px 10px 10px 10px #06ffc3; */
+            transition: all .3s
+        }
+
+
+        .img2 img {
+            margin-top: 36px;
+            margin-left: 80px;
+            width: 200px;
+            height: 200px;
+            border: 20px solid #e3ab7a;
+            display: inline-block;
+            /* box-shadow: 10px 10px 10px 10px #06ffc3; */
+            transition: all .3s
+        }
+
+        .img1 img:hover {
+            height: 500px;
+            width: 800px;
+            border-radius: 44px;
+            border-block: solid #e3ab7a 10px;
+            writing-mode: horizontal-tb;
+            transition: all .3s;
+        }
+
+        .img2 img:hover {
+            height: 800px;
+            width: 800px;
+            border-radius: 44px;
+            border-block: solid #e3ab7a 10px;
+            writing-mode: horizontal-tb;
+            transition: all .3s;
+        }
+
+        .img3 img:hover {
+            height: 800px;
+            width: 800px;
+            border-radius: 44px;
+            border-block: solid #e3ab7a 10px;
+            writing-mode: horizontal-tb;
+            transition: all .3s;
+        }
+
+        .img4 img:hover {
+            height: 800px;
+            width: 800px;
+            border-radius: 44px;
+            border-block: solid #e3ab7a 10px;
+            writing-mode: horizontal-tb;
+            transition: all .3s;
+        }
+
+        .img5 img:hover {
+            height: 500px;
+            width: 800px;
+            border-radius: 44px;
+            border-block: solid #e3ab7a 10px;
+            writing-mode: horizontal-tb;
+            transition: all .3s;
+        }
+
+        .img6 img:hover {
+            height: 800px;
+            width: 800px;
+            border-radius: 44px;
+            border-block: solid #e3ab7a 10px;
+            writing-mode: horizontal-tb;
+            transition: all .3s;
+        }
+
+        .img7 img:hover {
+            height: 500px;
+            width: 800px;
+            border-radius: 44px;
+            border-block: solid #e3ab7a 10px;
+            writing-mode: horizontal-tb;
+            transition: all .3s;
+        }
+
+        .img8 img:hover {
+            height: 500px;
+            width: 800px;
+            border-radius: 44px;
+            border-block: solid #e3ab7a 10px;
+            writing-mode: horizontal-tb;
+            transition: all .3s;
+        }
+
+        .img9 img:hover {
+            height: 500px;
+            width: 800px;
+            border-radius: 44px;
+            border-block: solid #e3ab7a 10px;
+            writing-mode: horizontal-tb;
+            transition: all .3s;
+        }
+
+        .img10 img:hover {
+            height: 800px;
+            width: 800px;
+            border-radius: 44px;
+            border-block: solid #e3ab7a 10px;
+            writing-mode: horizontal-tb;
+            transition: all .3s;
+        }
+
+        .img11 img:hover {
+            height: 500px;
+            width: 800px;
+            border-radius: 44px;
+            border-block: solid #e3ab7a 10px;
+            writing-mode: horizontal-tb;
+            transition: all .3s;
+        }
+
+        .img12 img:hover {
+            height: 800px;
+            width: 800px;
+            border-radius: 44px;
+        }
+
+        .img3 img {
+            margin-top: 36px;
+            margin-left: 80px;
+            width: 200px;
+            height: 200px;
+            border: 20px solid #e3ab7a;
+            display: inline-block;
+            /* box-shadow: 10px 10px 10px 10px #06ffc3; */
+            transition: all .3s
+        }
+
+        .img4 img {
+            margin-top: 36px;
+            margin-left: 80px;
+            width: 200px;
+            height: 200px;
+            border: 20px solid #e3ab7a;
+            display: inline-block;
+            /* box-shadow: 10px 10px 10px 10px #06ffc3; */
+            transition: all .3s
+        }
+
+        .img5 img {
+            margin-top: 36px;
+            margin-left: 80px;
+            width: 200px;
+            height: 200px;
+            border: 20px solid #e3ab7a;
+            display: inline-block;
+            /* box-shadow: 10px 10px 10px 10px #06ffc3; */
+            transition: all .3s
+        }
+
+        .img6 img {
+            margin-top: 36px;
+            margin-left: 80px;
+            width: 200px;
+            height: 200px;
+            border: 20px solid #e3ab7a;
+            display: inline-block;
+            /* box-shadow: 10px 10px 10px 10px #06ffc3; */
+            transition: all .3s
+        }
+
+        .img7 img {
+            margin-top: 36px;
+            margin-left: 80px;
+            width: 200px;
+            height: 200px;
+            border: 20px solid #e3ab7a;
+            display: inline-block;
+            /* box-shadow: 10px 10px 10px 10px #06ffc3; */
+            transition: all .3s
+        }
+
+        .img8 img {
+            margin-top: 36px;
+            margin-left: 80px;
+            width: 200px;
+            height: 200px;
+            border: 20px solid #e3ab7a;
+            display: inline-block;
+            /* box-shadow: 10px 10px 10px 10px #06ffc3; */
+            transition: all .3s
+        }
+
+        .img9 img {
+            margin-top: 36px;
+            margin-left: 80px;
+            width: 200px;
+            height: 200px;
+            border: 20px solid #e3ab7a;
+            display: inline-block;
+            /* box-shadow: 10px 10px 10px 10px #06ffc3; */
+            transition: all .3s
+        }
+
+        .img10 img {
+            margin-top: 36px;
+            margin-left: 80px;
+            width: 200px;
+            height: 200px;
+            border: 20px solid #e3ab7a;
+            display: inline-block;
+            /* box-shadow: 10px 10px 10px 10px #06ffc3; */
+            transition: all .3s
+        }
+
+        .img11 img {
+            margin-top: 36px;
+            margin-left: 80px;
+            width: 200px;
+            height: 200px;
+            border: 20px solid #e3ab7a;
+            display: inline-block;
+            /* box-shadow: 10px 10px 10px 10px #06ffc3; */
+            transition: all .3s
+        }
+
+        .img12 img {
+
+            margin-top: 36px;
+            margin-left: 80px;
+            width: 200px;
+            height: 200px;
+            border: 20px solid #e3ab7a;
+            display: inline-block;
+            /* box-shadow: 10px 10px 10px 10px #06ffc3; */
+            transition: all .3s
+        }
+
+
+        .happy {
+            display: flex;
+            margin-left: 70px;
+        }
+
+        .happy1 {
+            display: flex;
+            margin-left: 70px;
+        }
+
+        .happy2 {
+            display: flex;
+            margin-left: 70px;
+        }
+
+        .happy3 {
+            display: flex;
+            margin-left: 70px;
+        }
+
+        .ourwork {
+            align-items: center;
+            text-align: center;
+            font-size: 50px;
+            font-family: var(--font-family);
+            padding-left: 570px;
+        }
+
+        #form {
+            align-items: center;
+            text-align: center;
+        }
+
+        #form div {
+            margin-top: 10px;
+        }
+
+        #name {
+            margin-top: 10px;
+        }
+
+        #Email {
+            margin-top: 10px;
+        }
+
+        #contact {
+            margin-top: 10px;
+        }
+
+        section#form::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.7;
+            background: url('img/photo.png') no-repeat center top/cover;
+            margin-left: -762px;
+            margin-top: -9px;
+            height: 336px;
+        }
+
+        .center {
+            background-color: black;
+            color: aliceblue;
+            margin-top: 74px;
+            border-radius: 3px;
+        }
+
+        /* #ourwork{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+         z-index: -1;
+    opacity: 0.7;
+    background: url('img/kim-vladislav-VHnEKKwghWE-unsplash.jpg') no-repeat center center/cover;
+    margin-left: -762px;
+    margin-top: -20px;
+    height: 200px;
+    } */
+
+        #details label {
+            font-size: 1.3rem;
+        }
+
+        #form h1 {
+            font-size: 50px;
+        }
+
+        .examples {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .ourwork {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        #form {
+            overflow: hidden;
+        }
+
+        .h-primary {
+            position: relative;
+        }
+
+        .h-primary::after {
+            content: "";
+            position: absolute;
+            left: 0%;
+            bottom: 0%;
+            height: 3px;
+            width: 0%;
+            background-color: #333;
+            transition: all ease 1s;
+        }
+
+        .h-primary:hover::after {
+            width: 100%;
+        }
+        /* h1 {
+            position: relative;
+        }
+
+        h1::after {
+            content: "";
+            position: absolute;
+            left: 0%;
+            bottom: 0%;
+            height: 3px;
+            width: 0%;
+            background-color: #333;
+            transition: all ease 1s;
+        }
+
+        h1:hover::after {
+            width: 100%;
+        }
+        */
+        
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="logo">
+                <img src="img/Girl.png" alt="MyOnlineMeal.com">
+            </div>
+            <ul>
+                <li class="item"><a href="#home">Home</a></li>
+                <li class="item"><a href="#services">Services</a></li>
+                <li class="item"><a href="#client-section">Our work</a></li>
+                <li class="item"><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="home">
+        <h1 class="h-primary">Welcome to Myonlinework</h1>
+        <p>In case you are like my work and want me to make a sketch for you and your friends, </p>
+        <p>then click on the order now button to give me comission work </p>
+        <button class="btn">Order Now</button>
+    </section>
+
+    <h1 id="heading">.....These are the types of work we do.....</h1>
+
+    <section id="service-container">
+        <div id="box1">
+            <img src="img/WhatsApp Image 2023-08-19 at 4.01.31 PM.jpeg" alt="oil painting">
+            <h1>Oil painting</h1>
+            <p id="oilpainting">You can order any oil painting for your home decoration , You will get your comission
+                work in one week from the date of your order</p>
+        </div>
+        <div id="box2">
+            <img src="img/WhatsApp Image 2023-08-19 at 4.01.32 PM (2).jpeg" alt="oil painting">
+            <h1>Watercolor painting</h1>
+            <p id="oilpainting">You can order any Watercolor painting for your home decoration or to gift your loved
+                ones,You will get your comission
+                work in one week from the date of your order</p>
+        </div>
+        </div>
+        <div id="box3">
+            <img src="img/WhatsApp Image 2023-08-19 at 4.01.33 PM (1).jpeg" alt="oil painting">
+            <h1>Potrait sketches</h1>
+            <p id="oilpainting">You can order any Potrait sketches to gift your friends and family menbers,You will get
+                your comission
+                work in one week from the date of your order</p>
+        </div>
+        </div>
+    </section>
+
+    <section id="ourwork">
+        <div>
+            <h2 class="ourwork">
+                .....OUR WORKs.....
+            </h2>
+            <p>***Kindly hover to view image***</p>
+        </div>
+        <div class="examples">
+            <!-- <div class="happy"> -->
+            <div class="img1"><img src="img/WhatsApp Image 2023-08-19 at 3.57.51 PM (1).jpeg" alt="img">
+            </div>
+            <div class="img2"><img src="img/WhatsApp Image 2023-08-19 at 3.57.51 PM.jpeg" alt="img">
+            </div>
+            <div class="img3"><img src="img/WhatsApp Image 2023-08-19 at 3.57.52 PM (1).jpeg" alt="img">
+            </div>
+            <div class="img4"><img src="img/WhatsApp Image 2023-08-19 at 3.57.52 PM.jpeg" alt="img">
+            </div>
+
+            <!-- <div class="happy1"> -->
+
+            <div class="img5"><img src="img/WhatsApp Image 2023-08-19 at 3.57.53 PM.jpeg" alt="img">
+            </div>
+            <div class="img6"><img src="img/WhatsApp Image 2023-08-19 at 4.01.31 PM (1).jpeg" alt="img">
+            </div>
+
+            <div class="img7"><img src="img/WhatsApp Image 2023-08-19 at 4.01.31 PM.jpeg" alt="img">
+            </div>
+            <div class="img8"><img src="img/WhatsApp Image 2023-08-19 at 4.01.32 PM (1).jpeg" alt="img">
+            </div>
+            <!-- </div> -->
+            <!-- <div class="happy2"> -->
+            <div class="img9"><img src="img/WhatsApp Image 2023-08-19 at 4.01.32 PM (2).jpeg" alt="img">
+            </div>
+            <div class="img10"><img src="img/WhatsApp Image 2023-08-19 at 4.01.32 PM.jpeg" alt="img">
+            </div>
+            <div class="img11"><img src="img/WhatsApp Image 2023-08-19 at 4.01.33 PM (1).jpeg" alt="img">
+            </div>
+            <div class="img12"><img src="img/WhatsApp Image 2023-08-19 at 4.01.33 PM.jpeg" alt="img">
+            </div>
+            <!-- </div> -->
+            <!-- </div> -->
+        </div>
+    </section>
+    <hr>
+
+    <section id="form">
+        <h1>.....Register yourself.....</h1>
+        <div id="details">
+            <form action="backend.php">
+                <label for="name">Name:</label><input type="text" id="name" placeholder="enter your name">
+            </form>
+            <form action="backend.php">
+                <label for="Email">Email:</label><input type="text" id="Email" placeholder="enter your email">
+            </form>
+            <form action="backend.php">
+                <label for="contact">contact:</label><input type="text" id="contact"
+                    placeholder="enter your Contact no.">
+            </form>
+        </div>
+        <div>
+            <input type="submit" value="submit now">
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.myOnlinework.com. All rights reserved!
+        </div>
+    </footer>
+</body>
+
+</html>
